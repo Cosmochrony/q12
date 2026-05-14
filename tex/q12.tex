@@ -1,0 +1,861 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{doi}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}{Proposition}
+\newtheorem{hypothesis}{Hypothesis}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+
+  \title{Yang--Mills Dynamics from Projective Spectral Entropy:\\
+  Vertical Heat-Kernel Variation on the Admissible Fibre}
+
+  \author{J.~Beau\\
+  \small Independent Researcher, France\\
+  \small \texttt{jerome.beau@cosmochrony.org}}
+
+  \date{2026}
+
+  \maketitle
+
+  \begin{abstract}
+    The companion paper~\cite{Beau2026h} showed that the horizontal
+    variation of the projective spectral entropy functional
+    $S_\Pi[g] = \tfrac{1}{2}\log\det' A_g$ with respect to the base
+    metric produces the Einstein tensor as the infrared-dominant response,
+    via the Seeley--DeWitt coefficient~$a_2$.
+    The present paper carries out the complementary vertical variation:
+    extending $A_g$ to a Laplace-type operator
+    $A_{g,\mathcal{A}} = -(\nabla^{\mathcal{A}})^2 + E$
+    on the associated vector bundle of the admissible principal fibre,
+    we compute the Seeley--DeWitt coefficient~$a_4$ for the total
+    operator and extract the Yang--Mills term
+    $c_{\mathrm{YM}}\int \mathrm{Tr}(F_{\mu\nu}F^{\mu\nu})\sqrt{g}\,
+    \mathrm{d}^4 x$.
+    Variation of $S_\Pi[g, \mathcal{A}]$ with respect to the admissible
+    connection $\mathcal{A}$ then yields the Yang--Mills equations
+    $D_\mu F^{a\mu\nu} = 0$ in the current-free sector.
+    The induced gauge coupling $g_{\mathrm{YM}}^{-2}
+    \sim (12 \cdot 16\pi^2)^{-1}\log(\Lambda/\mu)$ is logarithmic
+    in the UV cutoff, while Newton's constant
+    $G_N^{-1} \sim \ell_{\mathrm{sp}}^{-2}$ is quadratic.
+    This spectral hierarchy is a structural consequence of the
+    Seeley--DeWitt expansion and does not require a separate
+    input.
+    The gauge group $G_\Pi$ is taken as input from
+    the spectral admissibility
+    programme~\cite{Beau2026q6a,Beau2026a35};
+    the SU(3) sector inherits the conditional
+    status~[H-color] of~\cite{Beau2026a35,Beau2026a36}.
+    The central message is:
+    $a_2 \to \text{Einstein}$, $a_4 \to \text{Yang--Mills}$,
+    from the single functional~$S_\Pi[g, \mathcal{A}]$.
+  \end{abstract}
+
+  \noindent\textbf{Keywords:}
+  Yang--Mills equations, heat-kernel expansion,
+  Seeley--DeWitt coefficients, spectral entropy,
+  induced gauge theory, gauge--gravity hierarchy,
+  admissible fibre, projective non-injectivity.
+
+  \newpage
+  \tableofcontents
+
+  \newpage
+
+  \section{Introduction}
+    \label{sec:introduction}
+
+    The Cosmochrony programme derives physical structure from a static
+    relational substrate $\chi$ via a generally non-injective
+    projection~$\Pi$~\cite{Beau2026m,Cosmochrony}.
+    Two lines of development have reached sufficient maturity to be
+    combined.
+    The first, pursued in the Gravity paper~\cite{Beau2026h} and
+    completed in Gravity~3.0, shows that the horizontal variation
+    of the projective spectral entropy functional
+    \begin{equation}\label{eq:spectral-entropy}
+      S_\Pi[g]
+      \;=\;
+      \tfrac{1}{2}\log\det'\! A_g
+    \end{equation}
+    with respect to the base metric $g_{\mu\nu}$ reproduces the
+    Einstein--Hilbert term as the infrared-dominant
+    contribution~\cite{Beau2026h}.
+    The second, pursued in the Q-series from Q6a onward, derives the
+    admissible gauge group $G_\Pi$, gauge charges, and the Yang--Mills
+    principle from the fibre structure of~$\Pi$~\cite{Beau2026q6a}.
+
+    These two results share a common object, $A_g$, but exploit it
+    in orthogonal directions.
+    The present paper unifies them by extending $A_g$ to a
+    Laplace-type operator $A_{g,\mathcal{A}}$ on the total associated
+    bundle of $\Pi$ and computing both the gravitational ($a_2$) and
+    the gauge ($a_4$) sectors of the spectral entropy from a single
+    functional.
+
+    \subsection{Main result}
+      \label{subsec:main-result}
+
+      The central result is the following.
+
+      \begin{theorem}[Yang--Mills from $a_4$]
+        \label{thm:main}
+        Let $G_\Pi$ be the admissible gauge group derived
+        in~\cite{Beau2026q6a,Beau2026a35}, and let
+        $A_{g,\mathcal{A}}$ be the Laplace-type operator on the
+        associated vector bundle constructed in
+        Section~\ref{sec:operator}.
+        Then:
+        \begin{enumerate}[label=\textup{(\roman*)}]
+        \item The Seeley--DeWitt coefficient $a_4(A_{g,\mathcal{A}})$
+        contains the Yang--Mills density:
+        \[
+          a_4(A_{g,\mathcal{A}})
+          \;\supset\;
+          \frac{1}{16\pi^2}
+          \int
+          \frac{1}{12}\,
+          \mathrm{Tr}(\Omega_{\mu\nu}\Omega^{\mu\nu})
+          \sqrt{g}\,\mathrm{d}^4 x\,,
+          \quad
+          \Omega_{\mu\nu} = F_{\mu\nu}\,.
+        \]
+        \item The projective spectral entropy contains the
+        renormalized Yang--Mills term:
+        \[
+          S_\Pi[g, \mathcal{A}]
+          \;\supset\;
+          \frac{1}{12 \cdot 16\pi^2}\,
+          \log\!\left(\frac{\Lambda}{\mu}\right)
+          \int
+          \mathrm{Tr}(F_{\mu\nu}F^{\mu\nu})
+          \sqrt{g}\,\mathrm{d}^4 x\,.
+        \]
+        \item The vertical variation of $S_\Pi$ yields the
+        Yang--Mills equations in the current-free sector:
+        \[
+          \frac{\delta S_\Pi}{\delta \mathcal{A}^a_\nu}
+          \;=\; 0
+          \quad\Longrightarrow\quad
+          D_\mu F^{a\mu\nu} = 0\,.
+        \]
+        \end{enumerate}
+      \end{theorem}
+
+      These three statements follow from standard heat-kernel
+      technology~\cite{Vassilevich2003,ParkerToms2009} applied to the
+      operator $A_{g,\mathcal{A}}$, once the base--fibre structure and
+      the admissibility of $\mathcal{A}$ are established.
+
+    \subsection{Position in the programme}
+      \label{subsec:position}
+
+      The logical chain of the present paper is:
+      \[
+        \Pi
+        \;\Rightarrow\;
+        P_{G_\Pi}(M, G_\Pi)
+        \;\Rightarrow\;
+        \nabla^{\mathcal{A}}
+        \;\Rightarrow\;
+        A_{g,\mathcal{A}}
+        = -(\nabla^{\mathcal{A}})^2 + E
+        \;\Rightarrow\;
+        a_4 \supset \tfrac{1}{12}\,
+        \mathrm{Tr}(F^2)
+        \;\Rightarrow\;
+        D_\mu F^{\mu\nu} = 0\,.
+      \]
+      The companion paper~\cite{Beau2026h} established the horizontal
+      half of the same chain:
+      \[
+        A_g
+        \;\Rightarrow\;
+        a_2 \supset R
+        \;\Rightarrow\;
+        G_{\mu\nu} = 0\,.
+      \]
+      Together, they show that the functional $S_\Pi[g,\mathcal{A}]$
+      produces Einstein gravity and Yang--Mills gauge dynamics as the
+      $a_2$ and $a_4$ sectors of a single spectral entropy expansion.
+
+      The gauge-gravity synthesis — including the joint equations of
+      motion, the ratio $G_N g_{\mathrm{YM}}^2$, and the
+      Eddington--Born--Infeld completion of the gauge sector —
+      is deferred to the companion paper Q13.
+
+    \subsection{Organisation}
+      \label{subsec:organisation}
+
+      Section~\ref{sec:decomposition} establishes the base--fibre
+      decomposition of the projective operator and proves the
+      horizontal--vertical decoupling lemma.
+      Section~\ref{sec:operator} constructs $A_{g,\mathcal{A}}$ on
+      the associated bundle.
+      Section~\ref{sec:a4} computes the $a_4$ coefficient and
+      identifies the Yang--Mills term.
+      Section~\ref{sec:variation} carries out the vertical variation
+      and derives the Yang--Mills equations.
+      Section~\ref{sec:hierarchy} establishes the induced coupling
+      and the gauge--gravity spectral hierarchy.
+      Section~\ref{sec:status} collects the epistemic status of each
+      result and the inherited conditionality on [H-color].
+      Section~\ref{sec:conclusion} concludes.
+
+      \newpage
+
+  \section{Base--fibre decomposition of the projective operator}
+    \label{sec:decomposition}
+
+    \subsection{The admissible principal bundle}
+      \label{subsec:bundle}
+
+      The non-injective projection $\Pi : \Omega \to O$ of
+      Foundation~M~\cite{Beau2026m} carries a natural
+      base--fibre structure.
+      The effective base space $M$ is the Riemannian manifold derived
+      in Q5b~\cite{Beau2026q6b} and Q11~\cite{Beau2026q11}:
+      the BFS shell stratification of $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$
+      converges in the Gromov--Hausdorff sense to a Carnot--Carathéodory
+      structure with homogeneous dimension $D_{\mathrm{hom}} = 4$
+      whose effective metric closure is Lorentzian,
+      as established in~\cite{Beau2026q11}.
+      The effective fibre is the admissible gauge group
+      $G_\Pi = \mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)$
+      derived in~\cite{Beau2026q6a,Beau2026a35} as the composite of
+      three admissibility fixed points of orbit sizes~1, 2,~and~3.
+
+      \begin{definition}[Admissible principal bundle]
+        \label{def:bundle}
+        The admissible principal bundle associated with the projection
+        $\Pi$ is the principal $G_\Pi$-bundle
+        $\pi : P \to M$, with structure group $G_\Pi$ and
+        connection~$\mathcal{A}$, constructed as follows.
+        The total space $P$ is the fibre product of the three orbit
+        sub-bundles identified in~\cite{Beau2026q6a,Beau2026a35}.
+        The connection $\mathcal{A} \in \Omega^1(P, \mathfrak{g}_\Pi)$
+        is the unique $\mathrm{ad}$-equivariant horizontal distribution
+        compatible with the admissibility constraints of
+        Foundation~M~\cite{Beau2026m}.
+        The curvature $F_{\mu\nu}
+        = \partial_\mu \mathcal{A}_\nu
+        - \partial_\nu \mathcal{A}_\mu
+        + [\mathcal{A}_\mu, \mathcal{A}_\nu]$
+        takes values in $\mathfrak{g}_\Pi$.
+      \end{definition}
+
+    \subsection{The associated vector bundle}
+      \label{subsec:associated}
+
+      Let $\rho : G_\Pi \to \mathrm{GL}(V)$ be a representation of
+      $G_\Pi$ on a finite-dimensional complex vector space~$V$.
+      The associated vector bundle is
+      $\mathcal{V} = P \times_\rho V \to M$.
+      Sections of~$\mathcal{V}$ carry the combined action of the base
+      geometry (through the Levi-Civita connection~$\nabla^g$) and the
+      fibre gauge field (through $\mathcal{A}$).
+      The covariant derivative on $\Gamma(\mathcal{V})$ is
+      \begin{equation}\label{eq:covariant-derivative}
+        \nabla^\mathcal{A}_\mu
+        \;=\;
+        \partial_\mu
+        + \omega_\mu
+        + \mathcal{A}_\mu\,,
+      \end{equation}
+      where $\omega_\mu$ is the spin connection on~$M$.
+
+    \subsection{Horizontal--vertical decoupling}
+      \label{subsec:decoupling}
+
+      The following lemma is essential for the independence of the
+      gravitational ($a_2$) and Yang--Mills ($a_4$) sectors.
+
+      \begin{lemma}[Horizontal--vertical decoupling at leading order]
+        \label{lem:decoupling}
+        At fixed admissible projection fibre, variations of the
+        base metric $g$ and of the fibre connection $\mathcal{A}$
+        define independent horizontal and vertical variations of the
+        total Laplace-type operator $A_{g,\mathcal{A}}$.
+        Mixed variations
+        $\delta^2 A_{g,\mathcal{A}} / \delta g\, \delta\mathcal{A}$
+        contribute only at order $a_6$ and higher in the
+        Seeley--DeWitt expansion and do not modify the leading $a_2$
+        Einstein sector or the leading $a_4$ Yang--Mills sector.
+      \end{lemma}
+
+      \begin{proof}
+        The Seeley--DeWitt coefficients $a_{2k}(A_{g,\mathcal{A}})$
+        are local integrals of invariants of degree~$2k$ in
+        derivatives of $g_{\mu\nu}$ and
+        $\mathcal{A}_\mu$~\cite{Vassilevich2003}.
+        At minimal coupling, the leading gauge-dependent contribution
+        to $a_4$ is the pure Yang--Mills invariant
+        $\mathrm{Tr}(\Omega_{\mu\nu}\Omega^{\mu\nu})$.
+        Mixed gauge--gravity terms of the form $R\,\mathrm{Tr}(F^2)$
+        are either absent at this order or reduce to curvature
+        renormalizations that are independent of the vertical
+        variation $\delta_\mathcal{A}$ and therefore do not affect
+        the Yang--Mills sector.
+        The $a_2$ coefficient depends only on $g$ and $E$
+        (not on $\mathcal{A}$ at minimal coupling), and the $a_4$
+        coefficient thus splits cleanly into a purely gravitational
+        part and a purely gauge part.
+        Horizontal and vertical variations are therefore decoupled
+        at the $a_2$ and $a_4$ levels.
+      \end{proof}
+
+      \begin{remark}
+        The decoupling holds under minimal coupling,
+        i.e.\ when $E$ does not depend on~$\mathcal{A}$.
+        Curvature couplings of the form
+        $E \supset \kappa\,F_{\mu\nu}g^{\mu\rho}g^{\nu\sigma}$
+        would introduce mixed $a_4$ terms;
+        the admissibility constraints of Foundation~M~\cite{Beau2026m}
+        impose minimal coupling as the natural choice at leading order.
+      \end{remark}
+
+  \section{Laplace-type operator with admissible fibre connection}
+    \label{sec:operator}
+
+    \subsection{Construction of the operator}
+      \label{subsec:operator-construction}
+
+      The spectral entropy functional of the Gravity
+      paper~\cite{Beau2026h} is extended to the associated
+      bundle $\mathcal{V}$ by replacing $A_g$ with the operator:
+      \begin{equation}\label{eq:total-operator}
+        A_{g,\mathcal{A}}
+        \;=\;
+        -(\nabla^\mathcal{A})^2 + E\,,
+      \end{equation}
+      acting on $L^2(M, \mathcal{V})$.
+      Here $(\nabla^\mathcal{A})^2
+  = g^{\mu\nu}\nabla^\mathcal{A}_\mu \nabla^\mathcal{A}_\nu$
+      is the connection Laplacian, and $E \in \mathrm{End}(\mathcal{V})$
+      is the endomorphism encoding the admissibility correction:
+      \begin{equation}\label{eq:endomorphism}
+        E
+        \;=\;
+        \frac{R}{6}\,\mathrm{id}_\mathcal{V}
+        + E_{\mathrm{adm}}\,,
+      \end{equation}
+      where $R/6\,\mathrm{id}_\mathcal{V}$ is the
+      Lichnerowicz--Weitzenb\"ock correction ensuring minimal coupling
+      to the scalar curvature, and $E_{\mathrm{adm}}$ encodes the
+      admissibility constraints of the projection fibre.
+
+    \subsection{Self-adjointness and non-negativity}
+      \label{subsec:selfadjoint}
+
+      \begin{proposition}
+        \label{prop:self-adjoint}
+        The operator $A_{g,\mathcal{A}}$ is self-adjoint and
+        non-negative on $L^2(M, \mathcal{V})$ for any admissible
+        connection $\mathcal{A}$ and any $E \geq 0$.
+      \end{proposition}
+
+      \begin{proof}
+        The connection Laplacian $-(\nabla^\mathcal{A})^2$ is
+        self-adjoint and non-negative by standard functional
+        analysis~\cite{ParkerToms2009}.
+        The endomorphism~$E$ is self-adjoint by construction
+        (the Lichnerowicz term is a scalar multiple of the identity,
+        and $E_{\mathrm{adm}}$ is symmetric under the admissibility
+        constraints of~\cite{Beau2026m}).
+        Non-negativity for $E \geq 0$ follows from the Bochner identity.
+      \end{proof}
+
+    \subsection{The extended spectral entropy}
+      \label{subsec:extended-entropy}
+
+      The spectral entropy functional is extended to:
+      \begin{equation}\label{eq:extended-entropy}
+        S_\Pi[g, \mathcal{A}]
+        \;=\;
+        \tfrac{1}{2}\,\log\det'\! A_{g,\mathcal{A}}\,,
+      \end{equation}
+      where $\det'$ denotes the zeta-regularized determinant
+      excluding the zero modes.
+      When $\mathcal{A} = 0$ and $E = R/6\,\mathrm{id}$,
+      this reduces to the functional of~\cite{Beau2026h}.
+
+  \section{Heat-kernel coefficient \(a_4\) and the Yang--Mills term}
+    \label{sec:a4}
+
+    \subsection{Seeley--DeWitt expansion}
+      \label{subsec:sdw-expansion}
+
+      For the operator $A_{g,\mathcal{A}}$ of
+      Equation~\eqref{eq:total-operator}, the heat-kernel
+      expansion as $t \to 0^+$ takes the standard
+      form~\cite{Vassilevich2003,ParkerToms2009}:
+      \begin{equation}\label{eq:heat-kernel-expansion}
+        \mathrm{Tr}\!\left(e^{-t\,A_{g,\mathcal{A}}}\right)
+        \;\sim\;
+        (4\pi t)^{-2}
+        \sum_{k=0}^{\infty} t^k\, a_{2k}(A_{g,\mathcal{A}})\,,
+        \quad
+        t \to 0^+\,,
+      \end{equation}
+      where in four dimensions:
+      \begin{align}
+        a_0
+        &= \int \mathrm{tr}(\mathrm{id})\,\sqrt{g}\,\mathrm{d}^4 x\,,
+        \label{eq:a0} \\
+        a_2
+        &= \int \mathrm{tr}\!\left(
+                               \frac{R}{6}\,\mathrm{id} - E
+        \right)\sqrt{g}\,\mathrm{d}^4 x\,,
+        \label{eq:a2}
+      \end{align}
+      and $a_4$ is given in
+      Section~\ref{subsec:a4-full} below.
+
+    \subsection{The \texorpdfstring{$a_2$}{a2} coefficient
+    and the Einstein sector}
+      \label{subsec:a2-einstein}
+
+      For $E = R/6\,\mathrm{id}_\mathcal{V} + E_{\mathrm{adm}}$,
+      the $a_2$ coefficient reduces (at minimal coupling) to:
+      \begin{equation}\label{eq:a2-minimal}
+        a_2(A_{g,\mathcal{A}})
+        \;=\;
+        -\int \mathrm{tr}(E_{\mathrm{adm}})\,\sqrt{g}\,\mathrm{d}^4 x\,,
+      \end{equation}
+      which is independent of the gauge connection $\mathcal{A}$.
+      Under the identification of the effective metric established
+      in~\cite{Beau2026h}, the variation $\delta_{g} S_\Pi
+  = \delta_g[\tfrac{1}{2}\log\det' A_{g,\mathcal{A}}]$
+      reproduces the Einstein tensor as the infrared-dominant
+      contribution; this is the result of the Gravity
+      paper~\cite{Beau2026h} and is not repeated here.
+      Lemma~\ref{lem:decoupling} guarantees that this sector
+      is not modified by the gauge connection at orders $a_2$
+      and~$a_4$.
+
+    \subsection{The \texorpdfstring{$a_4$}{a4} coefficient}
+      \label{subsec:a4-full}
+
+      The full $a_4$ coefficient for the operator
+      $D = -(\nabla^\mathcal{A})^2 + E$ acting on sections of a
+      vector bundle with fibre curvature
+      $\Omega_{\mu\nu} = [\nabla^\mathcal{A}_\mu,
+      \nabla^\mathcal{A}_\nu]$
+      is~\cite{Vassilevich2003}:
+      \begin{align}\label{eq:a4-full}
+        a_4(D)
+        &=
+        \frac{1}{16\pi^2}
+        \int \mathrm{tr}\!\Bigl[
+          \tfrac{1}{12}\,
+          \Omega_{\mu\nu}\Omega^{\mu\nu}
+          + \tfrac{1}{2} E^2
+          - \tfrac{1}{6} R E
+          + \tfrac{1}{180}\bigl(
+          5 R^2
+          - 2 R_{\mu\nu}R^{\mu\nu}
+          + 2 R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}
+          \bigr)\,\mathrm{id}
+          + \text{total derivatives}
+          \Bigr]
+        \sqrt{g}\,\mathrm{d}^4 x\,.
+      \end{align}
+      The terms involving $R$, $R_{\mu\nu}$,
+      $R_{\mu\nu\rho\sigma}$ are purely gravitational and
+      do not depend on $\mathcal{A}$.
+      The term $\tfrac{1}{2}E^2$ contributes to the cosmological
+      sector and to the admissibility renormalization.
+      The gauge-dependent term is:
+      \begin{equation}\label{eq:a4-gauge}
+        a_4(D)\big|_{\mathrm{gauge}}
+        \;=\;
+        \frac{1}{16\pi^2}
+        \int
+        \frac{1}{12}\,
+        \mathrm{Tr}(\Omega_{\mu\nu}\Omega^{\mu\nu})
+        \sqrt{g}\,\mathrm{d}^4 x\,,
+      \end{equation}
+      where $\mathrm{Tr}$ denotes the trace over the fibre
+      representation $\rho$ of $G_\Pi$.
+
+    \subsection{Identification of the curvature two-form}
+      \label{subsec:curvature-identification}
+
+      The fibre curvature of the admissible connection
+      $\mathcal{A}$ coincides with the gauge field strength:
+      \begin{equation}\label{eq:curvature-identification}
+        \Omega_{\mu\nu}
+        \;=\;
+        [\nabla^\mathcal{A}_\mu,\, \nabla^\mathcal{A}_\nu]
+        \;=\;
+        \partial_\mu \mathcal{A}_\nu
+        - \partial_\nu \mathcal{A}_\mu
+        + [\mathcal{A}_\mu, \mathcal{A}_\nu]
+        \;=\;
+        F_{\mu\nu}\,.
+      \end{equation}
+      This identification is standard for connection Laplacians
+      on principal bundles and holds for any representation
+      $\rho$ of $G_\Pi$.
+      Substituting into~\eqref{eq:a4-gauge}:
+      \begin{equation}\label{eq:a4-YM}
+        a_4(A_{g,\mathcal{A}})\big|_{\mathrm{gauge}}
+        \;=\;
+        \frac{1}{16\pi^2}
+        \int
+        \frac{1}{12}\,
+        \mathrm{Tr}(F_{\mu\nu}F^{\mu\nu})
+        \sqrt{g}\,\mathrm{d}^4 x\,.
+      \end{equation}
+      This establishes part~(i) of Theorem~\ref{thm:main}.
+
+  \section{Vertical variation and Yang--Mills equations}
+    \label{sec:variation}
+
+    \subsection{The spectral entropy and its renormalized form}
+      \label{subsec:renormalized}
+
+      The zeta-regularized spectral entropy~\eqref{eq:extended-entropy}
+      is related to the heat kernel by:
+      \begin{equation}\label{eq:zeta-entropy}
+        S_\Pi[g, \mathcal{A}]
+        \;=\;
+        -\tfrac{1}{2}\,\zeta'_{A_{g,\mathcal{A}}}(0)\,,
+      \end{equation}
+      where $\zeta_D(s) = \mathrm{Tr}(D^{-s})$ is the spectral
+      zeta function.
+      After UV regularization with cutoff~$\Lambda$ and
+      renormalization scale $\mu$, the gauge-dependent part of the
+      entropy acquires the contribution:
+      \begin{equation}\label{eq:entropy-YM}
+        S_\Pi[g, \mathcal{A}]
+        \;\supset\;
+        \frac{1}{12 \cdot 16\pi^2}\,
+        \log\!\left(\frac{\Lambda}{\mu}\right)
+        \int
+        \mathrm{Tr}(F_{\mu\nu}F^{\mu\nu})
+        \sqrt{g}\,\mathrm{d}^4 x\,,
+      \end{equation}
+      which establishes part~(ii) of Theorem~\ref{thm:main}.
+      The logarithmic form of the UV divergence is the hallmark of
+      a renormalizable gauge sector in four dimensions.
+
+    \subsection{Vertical variation}
+      \label{subsec:vertical-variation}
+
+      The variation of $S_\Pi[g, \mathcal{A}]$ with respect to the
+      gauge connection $\mathcal{A}^a_\mu$ is obtained from
+      \eqref{eq:entropy-YM} via:
+      \begin{align}\label{eq:vertical-variation}
+        \delta_\mathcal{A}
+        \left[\mathrm{Tr}(F_{\mu\nu}F^{\mu\nu})\right]
+        &=
+        2\,\mathrm{Tr}
+        \!\left[F^{\mu\nu}\,\delta F_{\mu\nu}\right]
+        \notag\\
+        &=
+        2\,\mathrm{Tr}
+        \!\left[F^{\mu\nu}
+            (D_\mu \delta\mathcal{A}_\nu
+            - D_\nu \delta\mathcal{A}_\mu)
+        \right]
+        \notag\\
+        &=
+        4\,\mathrm{Tr}
+        \!\left[F^{\mu\nu} D_\mu \delta\mathcal{A}_\nu\right]\,.
+      \end{align}
+      Integrating by parts (using $\nabla_\mu\sqrt{g} = 0$):
+      \begin{equation}\label{eq:integration-by-parts}
+        \int \mathrm{Tr}
+        \!\left[F^{\mu\nu} D_\mu \delta\mathcal{A}_\nu\right]
+        \sqrt{g}\,\mathrm{d}^4 x
+        =
+        -\int \mathrm{Tr}
+        \!\left[(D_\mu F^{\mu\nu})\delta\mathcal{A}_\nu\right]
+        \sqrt{g}\,\mathrm{d}^4 x
+        + \text{boundary terms}\,.
+      \end{equation}
+      Therefore:
+      \begin{equation}\label{eq:variation-entropy}
+        \frac{\delta S_\Pi}{\delta \mathcal{A}^a_\nu}
+        \;=\;
+        -\frac{1}{3 \cdot 16\pi^2}\,
+        \log\!\left(\frac{\Lambda}{\mu}\right)
+        \,(D_\mu F^{a\mu\nu})\,\sqrt{g}\,.
+      \end{equation}
+
+    \subsection{Yang--Mills equations}
+      \label{subsec:YM-equations}
+
+      In the absence of projected matter currents
+      (the ``current-free sector''), the variational
+      principle $\delta_\mathcal{A} S_\Pi = 0$ yields:
+      \begin{equation}\label{eq:YM-equations}
+        \boxed{D_\mu F^{a\mu\nu} = 0\,,}
+      \end{equation}
+      which are the Yang--Mills equations for the gauge group $G_\Pi$
+      in vacuo.
+      This establishes part~(iii) of Theorem~\ref{thm:main}.
+
+      \begin{remark}
+        When projected matter fields $\psi$ are included,
+        the variation of the matter coupling term in $S_\Pi$
+        contributes a current $J^{a\nu} = \delta S_{\mathrm{matter}}
+        / \delta \mathcal{A}^a_\nu$, and the full equations
+        become $D_\mu F^{a\mu\nu} = J^{a\nu}$.
+        The derivation of the matter current from the projective
+        structure lies beyond the scope of the present paper.
+      \end{remark}
+
+      \begin{remark}
+        The Yang--Mills equations~\eqref{eq:YM-equations} emerge
+        from $S_\Pi$ via the $a_4$ coefficient, which is four
+        orders of derivatives higher than the $a_2$ Einstein
+        sector.
+        This is not a deficiency but the correct spectral
+        signature: the gauge sector is renormalizable (logarithmic
+        coupling) while the gravitational sector is
+        non-renormalizable (quadratic coupling).
+        The Seeley--DeWitt expansion encodes this hierarchy
+        automatically.
+      \end{remark}
+
+  \section{Induced gauge coupling and gauge--gravity hierarchy}
+    \label{sec:hierarchy}
+
+    \subsection{Induced gauge coupling}
+      \label{subsec:induced-coupling}
+
+      Comparing the Yang--Mills term~\eqref{eq:entropy-YM}
+      with the standard Yang--Mills action
+      $S_{\mathrm{YM}} = -(4g_{\mathrm{YM}}^2)^{-1}
+      \int \mathrm{Tr}(F_{\mu\nu}F^{\mu\nu})
+      \sqrt{g}\,\mathrm{d}^4 x$ (in Euclidean signature),
+      the induced coupling is:
+      \begin{equation}\label{eq:induced-coupling}
+        g_{\mathrm{YM}}^{-2}
+        \;\sim\;
+        \frac{1}{12 \cdot 16\pi^2}\,
+        \log\!\left(\frac{\Lambda}{\mu}\right)\,.
+      \end{equation}
+      This logarithmic induction is characteristic of asymptotically
+      free gauge theories in four dimensions and is the standard
+      result of the induced gauge theory programme~\cite{Sakharov1968}.
+
+    \subsection{Newton's constant from the same spectral cutoff}
+      \label{subsec:newton}
+
+      The induced Newton's constant from the companion
+      paper~\cite{Beau2026h} is:
+      \begin{equation}\label{eq:newton-induced}
+        G_N^{-1}
+        \;\sim\;
+        \frac{\dim V}{16\pi^2}\,
+        \ell_{\mathrm{sp}}^{-2}\,,
+      \end{equation}
+      where $\ell_{\mathrm{sp}}$ is the spectral capacity length
+      (the same cutoff scale that appears in the Born--Infeld
+      completion of the gravitational
+      sector~\cite{Beau2026h,Beau2026c}).
+      Here $\dim V = \sum_i \dim V_i$ is the total dimension of the
+      representation bundle.
+
+    \subsection{Gauge--gravity spectral hierarchy}
+      \label{subsec:hierarchy}
+
+      The ratio of the two couplings is:
+      \begin{equation}\label{eq:hierarchy}
+        G_N\, g_{\mathrm{YM}}^2
+        \;\sim\;
+        \frac{\ell_{\mathrm{sp}}^2}{\dim V}
+        \cdot
+        \log\!\left(\frac{\Lambda}{\mu}\right)^{-1}\,.
+      \end{equation}
+      For $\Lambda \gg \mu$ (UV cutoff well above the renormalization
+      scale) and $\ell_{\mathrm{sp}} \ll 1$ (spectral length below
+      the Planck scale), this ratio satisfies
+      $G_N g_{\mathrm{YM}}^2 \ll 1$, reproducing the observed
+      hierarchy between gravitational and gauge strengths.
+
+      \begin{remark}
+        The hierarchy $G_N g_{\mathrm{YM}}^2 \ll 1$ is a structural
+        consequence of the Seeley--DeWitt expansion and requires no
+        separate fine-tuning.
+        It follows from the fact that gravity is induced at order~$a_2$
+        (quadratic UV divergence) while gauge dynamics are induced at
+        order~$a_4$ (logarithmic UV divergence).
+        The two sectors share the same spectral cutoff $\ell_{\mathrm{sp}}$,
+        which is the only scale in the problem beyond the
+        renormalization group flow.
+      \end{remark}
+
+  \section{Epistemic status, conditionalities, and relation to the
+  Standard Model gauge group}
+    \label{sec:status}
+
+    \subsection{Epistemic status of each result}
+      \label{subsec:epistemic-table}
+
+      Table~\ref{tab:epistemic} collects the epistemic status
+      of the main results of this paper.
+
+      \begin{table}[h]
+        \caption{Epistemic status of the main results.}
+        \label{tab:epistemic}
+        \centering
+        \begin{tabular}{lll}
+          \toprule
+          Result & Status & Dependence \\
+          \midrule
+          $a_4 \supset \frac{1}{12}\mathrm{Tr}(\Omega^2)$
+          & Standard~\cite{Vassilevich2003}
+          & None \\
+          $\Omega_{\mu\nu} = F_{\mu\nu}$ on admissible bundle
+          & Structural
+          & Definition~\ref{def:bundle} \\
+          Horizontal--vertical decoupling
+          & Theorem-level (Lemma~\ref{lem:decoupling})
+          & Minimal coupling \\
+          $\delta_\mathcal{A} S_\Pi \to D_\mu F^{\mu\nu}$
+          & Theorem-level (Theorem~\ref{thm:main})
+          & None \\
+          $g_{\mathrm{YM}}^{-2} \sim \log(\Lambda/\mu)$
+          & Scheme-dependent normalisation
+          & UV regularization \\
+          $G_N^{-1} \sim \ell_{\mathrm{sp}}^{-2}$
+          vs
+          $g_{\mathrm{YM}}^{-2} \sim \log\Lambda$
+          & Structural hierarchy
+          & Seeley--DeWitt \\
+          $G_\Pi = \mathrm{SU}(3)
+          \times \mathrm{SU}(2) \times \mathrm{U}(1)$
+          & Input from~\cite{Beau2026q6a,Beau2026a35}
+          & [H-color] for SU(3) \\
+          \bottomrule
+        \end{tabular}
+      \end{table}
+
+    \subsection{Inherited conditionality on [H-color]}
+      \label{subsec:hcolor}
+
+      The present paper takes $G_\Pi$ as an input from the
+      spectral admissibility sub-programme~\cite{Beau2026q6a,Beau2026a35}.
+      The SU(3) sector of $G_\Pi$ is established unconditionally for the
+      colour-adapted Cayley graph $\mathrm{Cay}(G_q, S^{(3)}_q)$
+      in~\cite{Beau2026a35}, and conditionally on
+      Hypothesis~[H-color] (triplet co-admissibility) for the standard
+      graph~\cite{Beau2026a35,Beau2026a36}.
+      The Theorem~\ref{thm:main} of the present paper holds for any
+      compact gauge group $G_\Pi$; it does not depend on [H-color]
+      itself.
+      The [H-color] conditionality applies only to the identification
+      $G_\Pi = \mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)$,
+      which is an input, not a derived result.
+
+      The complete programme-level status is:
+      \begin{itemize}
+        \item $G_\Pi = \mathrm{SU}(2) \times \mathrm{U}(1)$:
+        unconditional~\cite{Beau2026q6a};
+        \item $G_\Pi = \mathrm{SU}(3)$: unconditional for the
+        colour-adapted graph, conditional on [H-color] for the
+        standard graph~\cite{Beau2026a35};
+        \item [H-color] is numerically confirmed for
+        $q \in \{151, 211\}$ in~\cite{Beau2026a36};
+        analytical proof remains open.
+      \end{itemize}
+
+    \subsection{The SU(3) Yang--Mills uniqueness problem}
+      \label{subsec:su3-uniqueness}
+
+      The open problem identified in~\cite{Beau2026a35}~(§9.2)
+      is the analogue of the Q6a Yang--Mills derivation for SU(3):
+      showing that the SU(3) gauge dynamics (structure constants,
+      covariant derivative, Yang--Mills equations) emerge uniquely
+      from the colour triplet co-admissibility structure.
+      This is distinct from the result of the present paper,
+      which derives the Yang--Mills equations for any compact $G_\Pi$
+      from the $a_4$ heat-kernel coefficient.
+      The SU(3) Yang--Mills uniqueness problem concerns the
+      \emph{internal} structure of the SU(3) sector, not the
+      spectral derivation of the Yang--Mills action.
+
+    \subsection{What Q13 will add}
+      \label{subsec:q13}
+
+      The present paper establishes the two independent sectors:
+      \begin{align*}
+        \frac{\delta S_\Pi}{\delta g^{\mu\nu}}
+        &= c_{\mathrm{EH}}\,G_{\mu\nu} + \cdots
+        & \text{(Gravity~3.0,~\cite{Beau2026h}, } a_2 \text{)}\\
+        \frac{\delta S_\Pi}{\delta \mathcal{A}^a_\nu}
+        &= c_{\mathrm{YM}}\,D_\mu F^{a\mu\nu} + \cdots
+        & \text{(present paper, } a_4 \text{)}
+      \end{align*}
+      The joint variational problem
+      $\delta_{g, \mathcal{A}} S_\Pi = 0$,
+      the joint Einstein--Yang--Mills equations of motion,
+      the gauge-gravity coupling at order~$a_6$,
+      and the ratio $G_N / g_{\mathrm{YM}}^2$ as a
+      precise quantitative prediction, are deferred to the
+      companion paper Q13 (Gauge--Gravity Spectral Synthesis).
+
+  \section{Conclusion}
+    \label{sec:conclusion}
+
+    The main result of this paper is the derivation of the
+    Yang--Mills equations $D_\mu F^{a\mu\nu} = 0$ as the vertical
+    $a_4$ response of the projective spectral entropy functional
+    $S_\Pi[g, \mathcal{A}]$, in exact parallel with the derivation
+    of the Einstein equations as the horizontal $a_2$ response
+    established in~\cite{Beau2026h}.
+
+    The conceptually central observation is the following.
+    The Seeley--DeWitt degree of a coefficient encodes the physical
+    type of the coupling it induces:
+    \begin{align*}
+      a_2 &\;\longrightarrow\; \text{gravity,}
+      &&\text{quadratic UV divergence,}
+      &&\text{perturbatively non-renormalizable sector,} \\
+      a_4 &\;\longrightarrow\; \text{gauge,}
+      &&\text{logarithmic UV divergence,}
+      &&\text{renormalizable sector.}
+    \end{align*}
+    As a consequence, the gauge--gravity hierarchy
+    $G_N g_{\mathrm{YM}}^2 \ll 1$ is not an empirical input
+    but a structural output of the Seeley--DeWitt expansion:
+    it reflects the fact that gravity and gauge dynamics live
+    at different levels of the spectral hierarchy of the same
+    functional $S_\Pi[g, \mathcal{A}]$.
+
+    Both sectors emerge from the same spectral cutoff
+    $\ell_{\mathrm{sp}}$ and the same non-injective projection
+    principle.
+    The gauge group $G_\Pi$ is inherited from the admissibility
+    sub-programme~\cite{Beau2026q6a,Beau2026a35};
+    the SU(3) sector is conditional on [H-color].
+
+    The complete synthesis --- joint equations of motion,
+    Born--Infeld gauge-gravity completion,
+    and the quantitative hierarchy ratio ---
+    is addressed in Q13.
+
+    \newpage
+    \bibliographystyle{plain}
+    \bibliography{cosmochrony-bibliography,external-refs}
+
+\end{document}
