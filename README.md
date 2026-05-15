@@ -34,6 +34,14 @@ O31); the SU(3) sector inherits the conditional status [H-color] of O31/O32.
 **Central message**: $a_2 \to \text{Einstein}$, $a_4 \to \text{Yang–Mills}$, from the
 single functional $S_\Pi[g, \mathcal{A}]$.
 
+Beyond deriving both interactions, the paper identifies a conceptual principle: gravity and
+gauge dynamics are separated by geometric direction (horizontal vs. vertical variation on
+the admissible bundle) and by spectral order ($a_2$ vs. $a_4$ in the Seeley–DeWitt
+hierarchy), not by a missing symmetry group. The difficulty of incorporating gravity into
+the Standard Model framework may reflect a difference of spectral order rather than an
+absent symmetry. The natural organisational space for unification in this framework is
+therefore spectral and variational, not primarily group-theoretic.
+
 ## Key Result
 
 **Theorem (Yang–Mills from $a_4$)**: Let $G_\Pi$ be the admissible gauge group derived in
