@@ -59,11 +59,18 @@
     The gauge group $G_\Pi$ is taken as input from
     the spectral admissibility
     programme~\cite{Beau2026q6a,Beau2026a35};
-    the SU(3) sector inherits the conditional
-    status~[H-color] of~\cite{Beau2026a35,Beau2026a36}.
+    the SU(3) sector is unconditional at the effective level:
+    $[H\text{-color}]_{\mathrm{eff}}$ (equality of capacity exponents
+    $\delta_c = \delta_{\omega c} = \delta_{\omega^2c}$) is established
+    analytically in~\cite{Beau2026a35,Beau2026a36}.
     The central message is:
     $a_2 \to \text{Einstein}$, $a_4 \to \text{Yang--Mills}$,
     from the single functional~$S_\Pi[g, \mathcal{A}]$.
+    This spectral stratification suggests that the natural
+    organisational space for unification is spectral and
+    variational rather than purely group-theoretic: gravity
+    and gauge dynamics are separated by geometric direction
+    and heat-kernel order, not by a missing symmetry group.
   \end{abstract}
 
   \noindent\textbf{Keywords:}
@@ -214,7 +221,7 @@
       Section~\ref{sec:hierarchy} establishes the induced coupling
       and the gauge--gravity spectral hierarchy.
       Section~\ref{sec:status} collects the epistemic status of each
-      result and the inherited conditionality on [H-color].
+      result and the analytical status of [H-color].
       Section~\ref{sec:conclusion} concludes.
 
       \newpage
@@ -704,8 +711,7 @@
         renormalization group flow.
       \end{remark}
 
-  \section{Epistemic status, conditionalities, and relation to the
-  Standard Model gauge group}
+  \section{Epistemic status and relation to the Standard Model gauge group}
     \label{sec:status}
 
     \subsection{Epistemic status of each result}
@@ -745,38 +751,44 @@
           $G_\Pi = \mathrm{SU}(3)
           \times \mathrm{SU}(2) \times \mathrm{U}(1)$
           & Input from~\cite{Beau2026q6a,Beau2026a35}
-          & [H-color] for SU(3) \\
+          & Proved; $[H\text{-color}]_{\mathrm{eff}}$
+          in~\cite{Beau2026a35,Beau2026a36} \\
           \bottomrule
         \end{tabular}
       \end{table}
 
-    \subsection{Inherited conditionality on [H-color]}
+    \subsection{Analytical status of [H-color]}
       \label{subsec:hcolor}
 
       The present paper takes $G_\Pi$ as an input from the
       spectral admissibility sub-programme~\cite{Beau2026q6a,Beau2026a35}.
       The SU(3) sector of $G_\Pi$ is established unconditionally for the
       colour-adapted Cayley graph $\mathrm{Cay}(G_q, S^{(3)}_q)$
-      in~\cite{Beau2026a35}, and conditionally on
-      Hypothesis~[H-color] (triplet co-admissibility) for the standard
-      graph~\cite{Beau2026a35,Beau2026a36}.
+      in~\cite{Beau2026a35}.
+      For the standard Cayley graph, the effective co-admissibility
+      $[H\text{-color}]_{\mathrm{eff}}$ --- equality of the capacity
+      exponents $\delta_c = \delta_{\omega c} = \delta_{\omega^2 c}$ in
+      the large-$q$ limit --- is now established analytically
+      in~\cite{Beau2026a35,Beau2026a36} via two complementary mechanisms:
+      the intra-coset Vandermonde symmetry (Schur's lemma for the
+      Heisenberg centre, O31) and the modulation-frequency argument for
+      the O12 block-averaged fingerprint observable (O32).
       The Theorem~\ref{thm:main} of the present paper holds for any
-      compact gauge group $G_\Pi$; it does not depend on [H-color]
-      itself.
-      The [H-color] conditionality applies only to the identification
-      $G_\Pi = \mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)$,
-      which is an input, not a derived result.
+      compact gauge group $G_\Pi$ and is independent of these results;
+      they bear only on the identification of the specific group
+      $G_\Pi = \mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)$.
 
       The complete programme-level status is:
       \begin{itemize}
         \item $G_\Pi = \mathrm{SU}(2) \times \mathrm{U}(1)$:
         unconditional~\cite{Beau2026q6a};
         \item $G_\Pi = \mathrm{SU}(3)$: unconditional for the
-        colour-adapted graph, conditional on [H-color] for the
-        standard graph~\cite{Beau2026a35};
-        \item [H-color] is numerically confirmed for
-        $q \in \{151, 211\}$ in~\cite{Beau2026a36};
-        analytical proof remains open.
+        colour-adapted graph; unconditional at the effective level
+        ($[H\text{-color}]_{\mathrm{eff}}$ proved) for the standard
+        graph~\cite{Beau2026a35,Beau2026a36};
+        \item The finite-$q$ residual variance $R_{\mathrm{var}}$
+        is characterised as a modulation bias of order $O(q^{-1})$,
+        not an open hypothesis~\cite{Beau2026a36}.
       \end{itemize}
 
     \subsection{The SU(3) Yang--Mills uniqueness problem}
@@ -814,6 +826,40 @@
       precise quantitative prediction, are deferred to the
       companion paper Q13 (Gauge--Gravity Spectral Synthesis).
 
+    \subsection{Spectral stratification as an organisational
+    principle}
+      \label{subsec:spectral-stratification}
+
+      \begin{remark}
+        The spectral stratification identified in this paper ---
+        gravity at $a_2$, gauge at $a_4$ --- provides an
+        organisational principle that differs fundamentally from
+        purely group-theoretic unification schemes.
+        In the latter, gravity and gauge interactions are sought
+        at the same algebraic level, typically as different
+        representations of a common group $G_{\mathrm{unif}}$.
+        The present framework suggests instead that they are
+        separated by a geometric direction (horizontal versus
+        vertical variation on the admissible bundle) and by
+        spectral order (two versus four derivatives in the
+        heat-kernel expansion).
+        Their distinct UV behaviours --- quadratic divergence
+        for gravity, logarithmic divergence for gauge --- are
+        then consequences of this geometric separation rather
+        than independent empirical inputs.
+        In this reading, the difficulty of incorporating gravity
+        into the gauge-theoretic framework of the Standard Model
+        may reflect not a missing symmetry but a difference of
+        spectral order: gravity and gauge dynamics are
+        not at the same level of the Seeley--DeWitt hierarchy
+        of the admissible operator.
+        This observation does not imply that strictly algebraic
+        unification schemes are incorrect; it suggests that the
+        natural organisational space for unification in the
+        present framework is spectral and variational rather
+        than primarily group-theoretic.
+      \end{remark}
+
   \section{Conclusion}
     \label{sec:conclusion}
 
@@ -847,7 +893,14 @@
     principle.
     The gauge group $G_\Pi$ is inherited from the admissibility
     sub-programme~\cite{Beau2026q6a,Beau2026a35};
-    the SU(3) sector is conditional on [H-color].
+    the SU(3) sector is unconditional at the effective level,
+    with $[H\text{-color}]_{\mathrm{eff}}$ established
+    in~\cite{Beau2026a35,Beau2026a36}.
+    The spectral stratification identified here --- developed in
+    Section~\ref{subsec:spectral-stratification} --- suggests
+    more broadly that the organisational space for unification
+    may be spectral and variational rather than primarily
+    group-theoretic.
 
     The complete synthesis --- joint equations of motion,
     Born--Infeld gauge-gravity completion,
