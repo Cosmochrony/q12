@@ -4,7 +4,7 @@
 
 **Author**: Jérôme Beau
 
-**DOI**: [10.5281/zenodo.20261952](https://doi.org/10.5281/zenodo.20261952)
+**DOI**: [10.5281/zenodo.20189137](https://doi.org/10.5281/zenodo.20189137)
 
 **Web page**: https://cosmochrony.org/science/gauge-structure/q12/
 
