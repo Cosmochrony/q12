@@ -6,7 +6,7 @@
 
 **DOI**: [10.5281/zenodo.20261952](https://doi.org/10.5281/zenodo.20261952)
 
-**Web page**: https://cosmochrony.org/science/spectral/program/q12/
+**Web page**: https://cosmochrony.org/science/gauge-structure/q12/
 
 ## Abstract
 
