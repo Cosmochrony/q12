@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you cite this work, please use the metadata from this file."
+title: "Yang–Mills Dynamics from Projective Spectral Entropy: Vertical Heat-Kernel Variation on the Admissible Fibre"
+type: software
+authors:
+  - family-names: "Beau"
+    given-names: "Jérôme"
+repository-code: "https://github.com/Cosmochrony/q12"
+url: "https://cosmochrony.org/science/gauge-structure/q12/"
+version: "1.2"
+doi: "10.5281/zenodo.20189137"
+license: "CC-BY-4.0"
+preferred-citation:
+  type: article
+  title: "Yang–Mills Dynamics from Projective Spectral Entropy: Vertical Heat-Kernel Variation on the Admissible Fibre"
+  authors:
+    - family-names: "Beau"
+      given-names: "Jérôme"
+  year: 2026
+  doi: "10.5281/zenodo.20189137"
+  url: "https://doi.org/10.5281/zenodo.20189137"
