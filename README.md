@@ -10,28 +10,50 @@
 
 ## Abstract
 
-The companion paper (Gravity) showed that the horizontal variation of the projective
-spectral entropy functional S_Π[g] = ½ log det' A_g with respect to the base metric
-produces the Einstein tensor via the Seeley–DeWitt coefficient a₂.
+The companion Gravity paper showed that the horizontal variation of the projective spectral
+entropy functional $S_\Pi[g] = \tfrac12 \log\det' A_g$ with respect to the base metric produces
+the Einstein tensor through the Seeley–DeWitt coefficient $a_2$.
 
-This paper carries out the complementary vertical variation: extending A_g to a
-Laplace-type operator A_{g,A} = -(∇^A)² + E on the associated vector bundle of the
-admissible principal fibre, we compute the Seeley–DeWitt coefficient a₄ and extract the
-Yang–Mills term. Variation of S_Π[g, A] with respect to the admissible connection A yields
-the Yang–Mills equations D_μ F^{aμν} = 0 in the current-free sector.
+This paper carries out the complementary vertical variation. Extending $A_g$ to a Laplace-type
+operator $A_{g,\mathcal{A}} = -(\nabla^{\mathcal{A}})^2 + E$ on the associated vector bundle of the
+admissible principal fibre, with the connection and the fibre representation $\rho$ held fixed, we
+compute the local logarithmic part of the coefficient $a_4$ and isolate its gauge component, the
+Yang–Mills density $\tfrac1{12}\,\mathrm{tr}_\rho(F_{\mu\nu}F^{\mu\nu})$. Varying $S_\Pi[g,\mathcal{A}]$
+with respect to the admissible connection at fixed base metric then yields the source-free
+Yang–Mills equations $D_\mu F^{a\mu\nu} = 0$. This local kinetic Yang–Mills sector, and its
+variation, are the robust result of the paper.
 
-The induced gauge coupling is logarithmic in the UV cutoff, while Newton's constant is
-quadratic. This spectral hierarchy is a structural consequence of the Seeley–DeWitt expansion
-and requires no separate input.
+The coefficient of the induced logarithm depends on the fibre representation content through the
+Dynkin index $I_\rho$ and is therefore **not universal**. The physical gauge coupling
+$g_{\mathrm{YM}}$, like Newton's constant $G_N$, remains a **renormalized matching datum**, of which
+only the logarithmic running is computed here; a single logarithmic divergence does not by itself
+establish asymptotic freedom, which depends on the full projected field content and is not claimed.
+What is structural is the difference in ultraviolet divergence degree between the two sectors —
+quadratic at $a_2$ for gravity, logarithmic at $a_4$ for gauge — and not any predicted numerical
+hierarchy of the physical couplings.
 
-The SU(3) sector is unconditional at the effective level: [H-color]_eff (equality of
-capacity exponents δ_c = δ_{ωc} = δ_{ω²c}) is established analytically in O31/O32.
+The gauge group $G_\Pi = \mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$ is taken as input from
+the spectral admissibility sub-programme; its $\mathrm{SU}(3)$ sector, with
+$[\text{H-color}]_{\mathrm{pointwise}}$, is established there (O31/O32).
 
-**Central message**: a₂ → Einstein, a₄ → Yang–Mills, from the single functional S_Π[g, A].
+**Interpretation** (offered as an interpretive outlook, not a theorem): the spectral stratification
+$a_2 \to$ Einstein, $a_4 \to$ Yang–Mills suggests that the natural organisational space for
+unification in this framework may be spectral and variational rather than purely group-theoretic,
+gravity and gauge dynamics being separated by geometric direction (horizontal versus vertical) and
+by heat-kernel order.
 
-The spectral stratification suggests that the natural organisational space for unification
-is spectral and variational rather than purely group-theoretic: gravity and gauge dynamics
-are separated by geometric direction and heat-kernel order, not by a missing symmetry group.
+## Changes in this version (1.3)
+
+Corrective revision, no new physical claim beyond the robust kinetic-sector result:
+
+- Removed the double-counted $(4\pi)^{-2}$ in $a_4$ (it lives once in the heat-kernel prefactor).
+- Fixed the sign of the logarithmic term to match $S_\Pi = +\tfrac12\log\det' A$.
+- Introduced the trace normalization and the Dynkin index $I_\rho$; the induced coefficient is not universal.
+- Reframed $g_{\mathrm{YM}}$ and $G_N$ as renormalized matching data (only the log running is computed); withdrew the predictive $G_N$ formula and the "no-tuning" hierarchy, per Gravity 3.3.
+- Dropped the conformal $E = R/6$ term, which cancelled the $a_2$ Einstein contribution; the operator now reduces to Gravity's at $\mathcal{A}=0$.
+- Weakened the horizontal–vertical decoupling lemma: $\delta_g F^2 = T^{\mathrm{YM}}$ is an $a_4$-order back-reaction (deferred to Q13), not an $a_6$ effect.
+- Isolated the gauge component $\Omega^{\mathrm{gauge}}_{\mu\nu} = F_{\mu\nu}$ of the total bundle curvature (the total $\Omega$ also carries the spin-connection curvature).
+- Clarified that a logarithmic divergence alone does not establish asymptotic freedom.
 
 ## Status
 
@@ -39,11 +61,11 @@ Preprint — published on Zenodo.
 
 ## Dependencies
 
-- Gravity paper (H): horizontal variation, a₂ coefficient
-- Q6a: gauge group identification for SU(2)×U(1)
-- O31 (a35): SU(3) from colour-adapted Cayley graph; [H-color]_eff via Vandermonde symmetry
-- O32 (a36): [H-color]_eff proved analytically in expectation
+- Gravity paper (H): horizontal variation, $a_2$ coefficient
+- Q6a: gauge group identification for $\mathrm{SU}(2)\times\mathrm{U}(1)$
+- O31 (a35): $\mathrm{SU}(3)$ from colour-adapted Cayley graph; $[\text{H-color}]_{\mathrm{pointwise}}$
+- O32 (a36): finite-$q$ residual variance characterised as an $O(q^{-1})$ modulation bias
 
 ## Feeds into
 
-- Q13: Gauge–Gravity Spectral Synthesis (joint variational problem)
+- Q13: Gauge–Gravity Spectral Synthesis (joint variational problem, $T^{\mathrm{YM}}$ back-reaction, hierarchy ratio)
