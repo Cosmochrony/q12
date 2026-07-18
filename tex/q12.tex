@@ -12,6 +12,7 @@
 \usepackage{doi}
 \usepackage{booktabs}
 \usepackage{enumitem}
+\usepackage{tabularx}
 \hypersetup{
   pdftitle={Yang--Mills Dynamics from Projective Spectral Entropy: Vertical Heat-Kernel Variation on the Admissible Fibre},
   pdfauthor={Jérôme Beau},
@@ -519,6 +520,8 @@
           \Omega_{\mu\nu}\Omega^{\mu\nu}
           + \tfrac{1}{2} E^2
           - \tfrac{1}{6} R E
+          \notag\\
+        &\qquad\qquad
           + \tfrac{1}{180}\bigl(
           5 R^2
           - 2 R_{\mu\nu}R^{\mu\nu}
@@ -730,12 +733,16 @@
         \;=\;
         g_{\mathrm{YM}}^{-2}(\mu_0)
         \;+\;
-        \frac{I_\rho}{12 \cdot 16\pi^2}\,
+        \frac{I_\rho}{3 \cdot 16\pi^2}\,
         \log\!\left(\frac{\mu_0}{\mu}\right)\,.
       \end{equation}
+      The factor of four relative to the coefficient
+      in~\eqref{eq:entropy-YM} is the matching itself: that equation gives the coefficient of
+      $\int F^a_{\mu\nu}F^{a\,\mu\nu}$, which is identified with $(4g_{\mathrm{YM}}^2)^{-1}$,
+      not with $g_{\mathrm{YM}}^{-2}$.
       The constant $g_{\mathrm{YM}}^{-2}(\mu_0)$ is a renormalized
       matching datum, not an output of the construction; only the
-      logarithmic coefficient $I_\rho/(12\cdot16\pi^2)$ is computed
+      logarithmic coefficient $I_\rho/(3\cdot16\pi^2)$ is computed
       here, and it depends on the representation content through the
       Dynkin index $I_\rho$.
       The four-dimensional logarithmic form is the induced-gauge-theory
@@ -773,7 +780,7 @@
       prediction of the ratio would require the finite matching data of
       both sectors and is deferred to Q13.
 
-  \section{Epistemic status and relation to the Standard Model gauge group}
+  \section{Epistemic status and the Standard Model gauge group}
     \label{sec:status}
 
     \subsection{Epistemic status of each result}
@@ -786,41 +793,32 @@
         \caption{Epistemic status of the main results.}
         \label{tab:epistemic}
         \centering
-        \begin{tabular}{lll}
+        \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.37\textwidth}X@{}}
           \toprule
-          Result & Status & Dependence \\
+          Result & Status and dependence \\
           \midrule
           $a_4 \supset \frac{1}{12}\mathrm{tr}_\rho(F^2)$
-          & Standard~\cite{Vassilevich2003}
-          & None \\
+          & Standard~\cite{Vassilevich2003}; no further dependence \\
           $\Omega^{\mathrm{gauge}}_{\mu\nu} = F_{\mu\nu}$
-          & Structural
-          & Def.~\ref{def:bundle}, Eq.~\eqref{eq:curvature-split} \\
+          & Structural; Def.~\ref{def:bundle}, Eq.~\eqref{eq:curvature-split} \\
           Vertical variation at fixed $g$ isolates YM
-          & Theorem-level (Lemma~\ref{lem:decoupling})
-          & Minimal coupling \\
+          & Theorem-level (Lemma~\ref{lem:decoupling}); minimal coupling \\
           Full horizontal--vertical decoupling
           & Fails: $\delta_g F^2 = T^{\mathrm{YM}}$ at $a_4$
-          & Remark~\ref{rem:no-full-decoupling} \\
+          (Remark~\ref{rem:no-full-decoupling}) \\
           $\delta_\mathcal{A} S_\Pi \to D_\mu F^{\mu\nu} = 0$
-          & Theorem-level (Theorem~\ref{thm:main})
-          & Fixed $g$ \\
+          & Theorem-level (Theorem~\ref{thm:main}); at fixed $g$ \\
           Log running coefficient of $g_{\mathrm{YM}}^{-2}$
-          & Calculable, $\propto I_\rho$ (non-universal)
-          & UV regularization \\
+          & Calculable, $\propto I_\rho$ (non-universal); UV regularization \\
           Values of $g_{\mathrm{YM}}$ and $G_N$
-          & Renormalized matching data (not predicted)
-          & --- \\
+          & Renormalized matching data, not predicted \\
           Divergence degree: $a_2$ quadratic vs $a_4$ log
-          & Structural
-          & Seeley--DeWitt \\
-          $G_\Pi = \mathrm{SU}(3)
-          \times \mathrm{SU}(2) \times \mathrm{U}(1)$
-          & Input from~\cite{Beau2026q6a,Beau2026a35}
-          & $[H\text{-color}]_{\mathrm{pointwise}}$
-          in~\cite{Beau2026a35,Beau2026a36} \\
+          & Structural; Seeley--DeWitt \\
+          $G_\Pi = \mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$
+          & Input from~\cite{Beau2026q6a,Beau2026a35};
+          $[H\text{-color}]_{\mathrm{pointwise}}$ in~\cite{Beau2026a35,Beau2026a36} \\
           \bottomrule
-        \end{tabular}
+        \end{tabularx}
       \end{table}
 
     \subsection{Analytical status of [H-color]}
