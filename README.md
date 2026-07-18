@@ -28,9 +28,10 @@ Dynkin index $I_\rho$ and is therefore **not universal**. The physical gauge cou
 $g_{\mathrm{YM}}$, like Newton's constant $G_N$, remains a **renormalized matching datum**, of which
 only the logarithmic running is computed here; a single logarithmic divergence does not by itself
 establish asymptotic freedom, which depends on the full projected field content and is not claimed.
-What is structural is the difference in ultraviolet divergence degree between the two sectors —
-quadratic at $a_2$ for gravity, logarithmic at $a_4$ for gauge — and not any predicted numerical
-hierarchy of the physical couplings.
+What is structural, within the proper-time scheme used here, is the difference in ultraviolet
+divergence degree between the two sectors — quadratic at $a_2$ for gravity, logarithmic at $a_4$
+for gauge — and not any predicted numerical hierarchy of the physical couplings. The contrast is
+not scheme-independent: the zeta-regularized determinant carries no power divergences.
 
 The gauge group $G_\Pi = \mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$ is taken as input from
 the spectral admissibility sub-programme; its $\mathrm{SU}(3)$ sector, with
@@ -41,19 +42,6 @@ $a_2 \to$ Einstein, $a_4 \to$ Yang–Mills suggests that the natural organisatio
 unification in this framework may be spectral and variational rather than purely group-theoretic,
 gravity and gauge dynamics being separated by geometric direction (horizontal versus vertical) and
 by heat-kernel order.
-
-## Changes in this version (1.3)
-
-Corrective revision, no new physical claim beyond the robust kinetic-sector result:
-
-- Removed the double-counted $(4\pi)^{-2}$ in $a_4$ (it lives once in the heat-kernel prefactor).
-- Fixed the sign of the logarithmic term to match $S_\Pi = +\tfrac12\log\det' A$.
-- Introduced the trace normalization and the Dynkin index $I_\rho$; the induced coefficient is not universal.
-- Reframed $g_{\mathrm{YM}}$ and $G_N$ as renormalized matching data (only the log running is computed); withdrew the predictive $G_N$ formula and the "no-tuning" hierarchy, per Gravity 3.3.
-- Dropped the conformal $E = R/6$ term, which cancelled the $a_2$ Einstein contribution; the operator now reduces to Gravity's at $\mathcal{A}=0$.
-- Weakened the horizontal–vertical decoupling lemma: $\delta_g F^2 = T^{\mathrm{YM}}$ is an $a_4$-order back-reaction (deferred to Q13), not an $a_6$ effect.
-- Isolated the gauge component $\Omega^{\mathrm{gauge}}_{\mu\nu} = F_{\mu\nu}$ of the total bundle curvature (the total $\Omega$ also carries the spin-connection curvature).
-- Clarified that a logarithmic divergence alone does not establish asymptotic freedom.
 
 ## Status
 
@@ -68,4 +56,4 @@ Preprint — published on Zenodo.
 
 ## Feeds into
 
-- Q13: Gauge–Gravity Spectral Synthesis (joint variational problem, $T^{\mathrm{YM}}$ back-reaction, hierarchy ratio)
+- Q13: Gauge–Gravity Spectral Synthesis (joint variation, conditional EYM system, $T^{\mathrm{YM}}$ back-reaction)
