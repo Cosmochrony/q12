@@ -33,9 +33,13 @@ divergence degree between the two sectors — quadratic at $a_2$ for gravity, lo
 for gauge — and not any predicted numerical hierarchy of the physical couplings. The contrast is
 not scheme-independent: the zeta-regularized determinant carries no power divergences.
 
-The gauge group $G_\Pi = \mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$ is taken as input from
-the spectral admissibility sub-programme; its $\mathrm{SU}(3)$ sector, with
-$[\text{H-color}]_{\mathrm{pointwise}}$, is established there (O31/O32).
+The structure group $G_\Pi$ is a supplied input: any compact Lie group, with every result
+stated for that class. The gauge-structure sub-programme does not identify it. O31 is a
+withdrawal notice that withdraws the co-admissibility of the individual capacity profiles — the
+content of $[\text{H-color}]_{\mathrm{pointwise}}$ — and every derivation of a gauge factor,
+the composite $\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$ included. No result of
+this paper depends on which group is supplied: $G_\Pi$ enters only through the fibre
+representation $\rho$, and its representation content only through the Dynkin index $I_\rho$.
 
 **Interpretation** (offered as an interpretive outlook, not a theorem): the spectral stratification
 $a_2 \to$ Einstein, $a_4 \to$ Yang–Mills suggests that the natural organisational space for
@@ -50,9 +54,11 @@ Preprint — published on Zenodo.
 ## Dependencies
 
 - Gravity paper (H): horizontal variation, $a_2$ coefficient
-- Q6a: gauge group identification for $\mathrm{SU}(2)\times\mathrm{U}(1)$
-- O31 (a35): $\mathrm{SU}(3)$ from colour-adapted Cayley graph; $[\text{H-color}]_{\mathrm{pointwise}}$
-- O32 (a36): finite-$q$ residual variance characterised as an $O(q^{-1})$ modulation bias
+- Q6a: gauge-structure sub-programme; treats $\mathrm{SU}(3)$ as a candidate whose derivation
+  remains open
+- O31 (a35): withdrawal notice; supplies no gauge factor and no composite group
+- O32 (a36): finite-$q$ residual variance measured as an $O(q^{-1})$ modulation bias; a
+  measurement, not a group identification
 
 ## Feeds into
 

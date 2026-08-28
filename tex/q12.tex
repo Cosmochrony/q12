@@ -3,6 +3,13 @@
 \usepackage{lmodern}
 \input{glyphtounicode}
 \pdfgentounicode=1
+% The Adobe glyph list maps Delta, Omega, mu and periodcentered to the technical codepoints
+% U+2206 (INCREMENT), U+2126 (OHM SIGN), U+00B5 (MICRO SIGN) and U+00B7 (MIDDLE DOT), so the
+% deposited text layer would not be searchable as the intended characters.
+\pdfglyphtounicode{Delta}{0394}
+\pdfglyphtounicode{Omega}{03A9}
+\pdfglyphtounicode{mu}{03BC}
+\pdfglyphtounicode{periodcentered}{22C5}
 \usepackage[margin=2.5cm]{geometry}
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
@@ -76,9 +83,11 @@
     logarithmic at~$a_4$ for gauge --- and not any predicted numerical hierarchy of the physical
     couplings; the contrast is not scheme-independent, the zeta-regularized determinant carrying
     no power divergences.
-    The gauge group $G_\Pi = \mathrm{SU}(3)\times\mathrm{SU}(2)\times
-    \mathrm{U}(1)$ is taken as input from the spectral admissibility
-    sub-programme, whose $\mathrm{SU}(3)$ sector is established there.
+    The structure group $G_\Pi$ is a supplied input: it is any compact Lie group, and
+    every result below is stated for that class.
+    The gauge-structure sub-programme does not identify it, and in particular does not
+    establish the composite
+    $G_\Pi = \mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$ or its colour factor.
     \emph{Interpretation.} The result suggests that, within this
     framework, the natural organisational space for unification may be
     spectral and variational rather than purely group-theoretic:
@@ -118,9 +127,10 @@
     with respect to the base metric $g_{\mu\nu}$ reproduces the
     Einstein--Hilbert term as the infrared-dominant
     contribution~\cite{Beau2026h}.
-    The second, pursued in the Q-series from Q6a onward, derives the
-    admissible gauge group $G_\Pi$, gauge charges, and the Yang--Mills
-    principle from the fibre structure of~$\Pi$~\cite{Beau2026q6a}.
+    The second, pursued in the Q-series from Q6a onward, derives gauge charges and the
+    Yang--Mills principle from the fibre structure of~$\Pi$~\cite{Beau2026q6a}; it does not
+    determine the gauge group $G_\Pi$, which is a supplied input here
+    (Section~\ref{subsec:hcolor}).
 
     These two results share a common object, $A_g$, but exploit it
     in orthogonal directions.
@@ -137,8 +147,8 @@
 
       \begin{theorem}[Yang--Mills from $a_4$]
         \label{thm:main}
-        Let $G_\Pi$ be the admissible gauge group derived
-        in~\cite{Beau2026q6a,Beau2026a35}, and let
+        Let $G_\Pi$ be a compact Lie group, supplied as the structure group of the
+        admissible principal bundle of Definition~\ref{def:bundle}, and let
         $A_{g,\mathcal{A}}$ be the Laplace-type operator on the
         associated vector bundle constructed in
         Section~\ref{sec:operator}.
@@ -240,7 +250,7 @@
       Section~\ref{sec:hierarchy} establishes the induced running and the scheme-qualified
       divergence structure.
       Section~\ref{sec:status} collects the epistemic status of each
-      result and the analytical status of [H-color].
+      result and the status of the gauge-group input.
       Section~\ref{sec:conclusion} concludes.
 
       \newpage
@@ -265,19 +275,20 @@
       structure with homogeneous dimension $D_{\mathrm{hom}} = 4$
       whose effective metric closure is Lorentzian,
       as established in~\cite{Beau2026q11}.
-      The effective fibre is the admissible gauge group
-      $G_\Pi = \mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)$
-      derived in~\cite{Beau2026q6a,Beau2026a35} as the composite of
-      three admissibility fixed points of orbit sizes~1, 2,~and~3.
+      The effective fibre is a compact Lie group $G_\Pi$, supplied as an input.
+      No particular group is fixed here, and no decomposition of $G_\Pi$ into factors or of
+      the fibre into orbit sectors is used; the status of the identification is discussed in
+      Section~\ref{subsec:hcolor}.
 
       \begin{definition}[Admissible principal bundle]
         \label{def:bundle}
         The admissible principal bundle associated with the projection
         $\Pi$ is the principal $G_\Pi$-bundle
         $\pi : P \to M$, with structure group $G_\Pi$ and
-        connection~$\mathcal{A}$, constructed as follows.
-        The total space $P$ is the fibre product of the three orbit
-        sub-bundles identified in~\cite{Beau2026q6a,Beau2026a35}.
+        connection~$\mathcal{A}$, specified as follows.
+        The total space $P$ is a smooth principal $G_\Pi$-bundle over $M$ carrying such a
+        connection; no decomposition of $P$ into sub-bundles is assumed, and none is used
+        below.
         The connection $\mathcal{A} \in \Omega^1(P, \mathfrak{g}_\Pi)$
         is the unique $\mathrm{ad}$-equivariant horizontal distribution
         compatible with the admissibility constraints of
@@ -779,7 +790,7 @@
       statement about the ratio would require the finite matching data of both sectors, which the
       spectral expansion does not supply; Q13 likewise treats them as matching data.
 
-  \section{Epistemic status and the Standard Model gauge group}
+  \section{Epistemic status and the gauge-group input}
     \label{sec:status}
 
     \subsection{Epistemic status of each result}
@@ -813,63 +824,61 @@
           & Renormalized matching data, not predicted \\
           Divergence degree: $a_2$ quadratic vs $a_4$ log
           & Structural \emph{within the proper-time scheme}; not scheme-independent \\
-          $G_\Pi = \mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$
-          & Input from~\cite{Beau2026q6a,Beau2026a35};
-          $[H\text{-color}]_{\mathrm{pointwise}}$ in~\cite{Beau2026a35,Beau2026a36} \\
+          Identification of $G_\Pi$ with a specific compact group
+          & Not established; $G_\Pi$ is a supplied input and no result above depends
+          on which group is supplied (Section~\ref{subsec:hcolor}) \\
           \bottomrule
         \end{tabularx}
       \end{table}
 
-    \subsection{Analytical status of [H-color]}
+    \subsection{Status of the supplied gauge group}
       \label{subsec:hcolor}
 
-      The present paper takes $G_\Pi$ as an input from the
-      spectral admissibility sub-programme~\cite{Beau2026q6a,Beau2026a35}.
-      The SU(3) sector of $G_\Pi$ is established unconditionally for the
-      colour-adapted Cayley graph $\mathrm{Cay}(G_q, S^{(3)}_q)$
-      in~\cite{Beau2026a35}.
-      For the standard Cayley graph, $[H\text{-color}]_{\mathrm{eff}}$
-      (equality of capacity exponents in the large-$q$ limit) is established
-      analytically in~\cite{Beau2026a35,Beau2026a36} via the intra-coset
-      Vandermonde symmetry (O31) and the modulation-frequency argument (O32).
-      Furthermore, $[H\text{-color}]_{\mathrm{pointwise}}$ (exact equality at
-      finite~$q$) is proved in O31 (Proposition~4.23,~\cite{Beau2026a35}): each
-      O12 fingerprint vector is a single additive character of frequency
-      $B = c_1 b_1 + c_2 b_2 + c_3 b_3$, and the orbit dilation
-      $B \mapsto \omega B$ is a bijection of $\mathbb{Z}/q\mathbb{Z}$, so
-      $\sigma_c(n) = \sigma_{\omega c}(n) = \sigma_{\omega^2 c}(n)$ holds exactly.
-      The Theorem~\ref{thm:main} of the present paper holds for any
-      compact gauge group $G_\Pi$ and is independent of these results;
-      they bear only on the identification of the specific group
-      $G_\Pi = \mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)$.
+      The present paper takes $G_\Pi$ as a supplied input.
+      Theorem~\ref{thm:main} holds for any compact gauge group $G_\Pi$, and no result,
+      computation or interpretation of this paper depends on which group is supplied, on any
+      decomposition of $P$ into sub-bundles, or on the presence of a colour sector: the group
+      enters only through the fibre representation~$\rho$, and its representation content only
+      through the Dynkin index~$I_\rho$.
 
-      The complete programme-level status is:
-      \begin{itemize}
-        \item $G_\Pi = \mathrm{SU}(2) \times \mathrm{U}(1)$:
-        unconditional~\cite{Beau2026q6a};
-        \item $G_\Pi = \mathrm{SU}(3)$: unconditional for the
-        colour-adapted graph; unconditional at the pointwise level
-        ($[H\text{-color}]_{\mathrm{pointwise}}$ proved) for the standard
-        graph (Proposition~4.23 of O31~\cite{Beau2026a35});
-        \item The finite-$q$ residual variance $R_{\mathrm{var}}$
-        is characterised as a modulation bias of order $O(q^{-1})$,
-        not an open hypothesis~\cite{Beau2026a36}.
-      \end{itemize}
+      No identification of $G_\Pi$ with a specific compact group is available.
+      O31~\cite{Beau2026a35} is a withdrawal notice.
+      Among the results it withdraws are the co-admissibility of the individual capacity profiles
+      $\sigma_{c_1}$, $\sigma_{c_2}$, $\sigma_{c_3}$, which is the content of
+      $[H\text{-color}]_{\mathrm{pointwise}}$ and of its Proposition~4.23; the uniqueness of
+      $\mathrm{SU}(3)$ among connected compact subgroups acting irreducibly on
+      $\mathbb{C}^3$; the irreducibility of the group of fibre-preserving transformations of
+      the colour eigenspace; the arithmetic criterion $q \equiv 1 \pmod 3$; and every
+      derivation of a gauge factor, the composite
+      $\mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)$, the determinant-one
+      condition, the commutation of the putative factors and the direct-product structure
+      included.
+      Three counterexamples are given there: $\mathrm{SO}(3) \subset \mathrm{SU}(3)$, a
+      proper connected compact subgroup acting irreducibly on $\mathbb{C}^3$ with determinant
+      one; the diagonal torus $T^2$, which satisfies every constraint that was imposed while
+      acting reducibly; and $\{1, 2, q-3\}$, an admissible triplet for every prime
+      $q \geq 7$ irrespective of $q \bmod 3$.
+      Nothing withdrawn there is replaced by a weaker positive statement.
 
-    \subsection{The SU(3) Yang--Mills uniqueness problem}
+      O32~\cite{Beau2026a36} characterises the finite-$q$ residual variance
+      $R_{\mathrm{var}}$ as a modulation bias of order $O(q^{-1})$.
+      That is a measurement, and the present paper takes no position on its interpretation;
+      it does not read it as identifying a group.
+
+      Q6a~\cite{Beau2026q6a} treats $\mathrm{SU}(3)$ as a structurally motivated candidate
+      whose derivation remains open, and does not assert the composite.
+      The identification of $G_\Pi$ is therefore an open question of the gauge-structure
+      sub-programme, carried here as a supplied input and used nowhere.
+
+    \subsection{Internal structure of a non-abelian sector}
       \label{subsec:su3-uniqueness}
 
-      The open problem identified in~\cite{Beau2026a35}~(§9.2)
-      is the analogue of the Q6a Yang--Mills derivation for SU(3):
-      showing that the SU(3) gauge dynamics (structure constants,
-      covariant derivative, Yang--Mills equations) emerge uniquely
-      from the colour triplet co-admissibility structure.
-      This is distinct from the result of the present paper,
-      which derives the Yang--Mills equations for any compact $G_\Pi$
-      from the $a_4$ heat-kernel coefficient.
-      The SU(3) Yang--Mills uniqueness problem concerns the
-      \emph{internal} structure of the SU(3) sector, not the
-      spectral derivation of the Yang--Mills action.
+      Theorem~\ref{thm:main} derives the Yang--Mills equations for any compact $G_\Pi$ from
+      the $a_4$ heat-kernel coefficient.
+      It says nothing about the \emph{internal} structure of a particular non-abelian
+      sector --- its structure constants, its covariant derivative, or any principle that
+      would single that sector out among compact groups.
+      No such derivation is available for a colour sector, and none is claimed here.
 
     \subsection{Relation to Q13}
       \label{subsec:q13}
@@ -956,10 +965,9 @@
     Both sectors are cut off at the same spectral capacity length
     $\ell_{\mathrm{sp}}$ and follow from the same non-injective
     projection principle.
-    The gauge group $G_\Pi$ is inherited from the admissibility
-    sub-programme~\cite{Beau2026q6a,Beau2026a35}, with
-    $[H\text{-color}]_{\mathrm{pointwise}}$ established
-    in~\cite{Beau2026a35}.
+    The gauge group $G_\Pi$ is a supplied compact group: it is not an output of this
+    construction, and the gauge-structure sub-programme does not identify it
+    (Section~\ref{subsec:hcolor}).
 
     \emph{Interpretation.} The spectral stratification identified
     here --- gravity at $a_2$, gauge at $a_4$, developed in
