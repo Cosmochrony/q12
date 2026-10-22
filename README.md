@@ -10,9 +10,11 @@
 
 ## Abstract
 
-The companion Gravity paper showed that the horizontal variation of the projective spectral
-entropy functional $S_\Pi[g] = \tfrac12 \log\det' A_g$ with respect to the base metric produces
-the Einstein tensor through the Seeley–DeWitt coefficient $a_2$.
+The companion Gravity paper states, for a supplied Riemannian metric, the conditions under which the
+horizontal variation of the projective spectral entropy functional $S_\Pi[g] = \tfrac12 \log\det' A_g$
+with respect to the base metric is dominated by the Einstein tensor: a non-zero Einstein coefficient, which is a
+matching datum whose cutoff contribution comes from the Seeley–DeWitt coefficient $a_2$, and small curvature
+relative to the renormalized higher-derivative scale.
 
 This paper carries out the complementary vertical variation. Extending $A_g$ to a Laplace-type
 operator $A_{g,\mathcal{A}} = -(\nabla^{\mathcal{A}})^2 + E$ on the associated vector bundle of the
@@ -53,7 +55,7 @@ Preprint — published on Zenodo.
 
 ## Dependencies
 
-- Gravity paper (H): horizontal variation, $a_2$ coefficient
+- Gravity paper (H): conditions for a dominant horizontal Einstein term on a supplied Riemannian metric, $a_2$ coefficient
 - Q6a: gauge-structure sub-programme; treats $\mathrm{SU}(3)$ as a candidate whose derivation
   remains open
 - O31 (a35): withdrawal notice; supplies no gauge factor and no composite group
