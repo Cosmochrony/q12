@@ -12,7 +12,7 @@
 
 The companion Gravity paper states, for a supplied Riemannian metric, the conditions under which the
 horizontal variation of the projective spectral entropy functional $S_\Pi[g] = \tfrac12 \log\det' A_g$
-with respect to the base metric is dominated by the Einstein tensor: a non-zero Einstein coefficient, which is a
+with respect to the base metric is locally dominated by the Einstein tensor: a non-zero Einstein coefficient, which is a
 matching datum whose cutoff contribution comes from the Seeley–DeWitt coefficient $a_2$, and small curvature
 relative to the renormalized higher-derivative scale.
 
