@@ -56,8 +56,8 @@ Preprint — published on Zenodo.
 ## Dependencies
 
 - Gravity paper (H): conditions for a dominant horizontal Einstein term on a supplied Riemannian metric, $a_2$ coefficient
-- Q6a: gauge-structure sub-programme; treats $\mathrm{SU}(3)$ as a candidate whose derivation
-  remains open
+- Q6a: gauge-structure sub-programme; gauge charges as fibre invariants, a connection conditional on two
+  continuum hypotheses, and $\mathrm{SU}(3)$ as a hypothesis whose identification is open
 - O31 (a35): withdrawal notice; supplies no gauge factor and no composite group
 - O32 (a36): finite-$q$ residual variance measured as an $O(q^{-1})$ modulation bias; a
   measurement, not a group identification
