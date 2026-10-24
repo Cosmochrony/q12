@@ -2,6 +2,7 @@
   "bib_key": "Beau2026q12",
   "web_url": "https://cosmochrony.org/science/gauge-structure/q12/",
   "main_tex": "tex/q12.tex",
+  "publication_type": "workingpaper",
   "zenodo_id": 20189137,
   "doi": "10.5281/zenodo.20189137",
   "notes": "Version 1.7 aligns the description of Q6a with Q6a 2.3: Q6a defines gauge charges as fibre invariants and reads the connection as the generator of fibre transport under two continuum hypotheses it does not prove, with the Yang-Mills action as a structural motivation; it does not derive the Yang-Mills principle. SU(3) is described as a hypothesis whose identification is open. The results of Q12 are unchanged."
