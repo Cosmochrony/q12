@@ -21,7 +21,7 @@ operator $A_{g,\mathcal{A}} = -(\nabla^{\mathcal{A}})^2 + E$ on the associated v
 admissible principal fibre, with the connection and the fibre representation $\rho$ held fixed, we
 compute the local logarithmic part of the coefficient $a_4$ and isolate its gauge component, the
 Yang–Mills density $\tfrac1{12}\,\mathrm{tr}_\rho(F_{\mu\nu}F^{\mu\nu})$. Varying $S_\Pi[g,\mathcal{A}]$
-with respect to the admissible connection at fixed base metric then yields the source-free
+with respect to the supplied connection at fixed base metric then yields the source-free
 Yang–Mills equations $D_\mu F^{a\mu\nu} = 0$. This local kinetic Yang–Mills sector, and its
 variation, are the robust result of the paper.
 
