@@ -21,7 +21,7 @@ operator $A_{g,\mathcal{A}} = -(\nabla^{\mathcal{A}})^2 + E$ on the associated v
 admissible principal fibre, with the connection and the fibre representation $\rho$ held fixed, we
 compute the local logarithmic part of the coefficient $a_4$ and isolate its gauge component, the
 Yang–Mills density $\tfrac1{12}\,\mathrm{tr}_\rho(F_{\mu\nu}F^{\mu\nu})$. Varying $S_\Pi[g,\mathcal{A}]$
-with respect to the admissible connection at fixed base metric then yields the source-free
+with respect to the supplied connection at fixed base metric then yields the source-free
 Yang–Mills equations $D_\mu F^{a\mu\nu} = 0$. This local kinetic Yang–Mills sector, and its
 variation, are the robust result of the paper.
 
@@ -56,8 +56,9 @@ Preprint — published on Zenodo.
 ## Dependencies
 
 - Gravity paper (H): conditions for a dominant horizontal Einstein term on a supplied Riemannian metric, $a_2$ coefficient
-- Q6a: gauge-structure sub-programme; gauge charges as fibre invariants, a connection conditional on two
-  continuum hypotheses, and $\mathrm{SU}(3)$ as a hypothesis whose identification is open
+- Q6a: gauge-structure sub-programme; gauge charges as fibre-constant functions of the observable state,
+  two continuum hypotheses that do not determine a connection, a supplied connection read as the
+  generator of parallel transport, and $\mathrm{SU}(3)$ as a hypothesis whose identification is open
 - O31 (a35): withdrawal notice; supplies no gauge factor and no composite group
 - O32 (a36): finite-$q$ residual variance measured as an $O(q^{-1})$ modulation bias; a
   measurement, not a group identification
