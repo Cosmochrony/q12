@@ -66,3 +66,7 @@ Preprint — published on Zenodo.
 ## Feeds into
 
 - Q13: Gauge–Gravity Spectral Synthesis (joint variation, conditional EYM system, $T^{\mathrm{YM}}$ back-reaction)
+
+## BI-1 correction candidate
+
+Version 1.9, pending independent review and publication. Uses Gravity's spectral cutoff length as an explicitly shared regularization premise; withdraws the BornInfeld length-scale attribution.
