@@ -60,8 +60,8 @@ Preprint — published on Zenodo.
   two continuum hypotheses that do not determine a connection, a supplied connection read as the
   generator of parallel transport, and $\mathrm{SU}(3)$ as a hypothesis whose identification is open
 - O31 (a35): withdrawal notice; supplies no gauge factor and no composite group
-- O32 (a36): finite-$q$ residual variance measured as an $O(q^{-1})$ modulation bias; a
-  measurement, not a group identification
+- O32 (a36): its colour-triplet diagnostic is proved colour-blind (unit-scaling invariance of
+  the capacity profile); no colour or group statement is read from it
 
 ## Feeds into
 
